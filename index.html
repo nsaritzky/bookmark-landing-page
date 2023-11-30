@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href=
+  "./images/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+  </style>
+</head>
+<body class="font-rubik">
+  <div class="max-w-screen-xl mx-auto w-5/6">
+    <nav class="mt-8">
+      <div class="flex justify-between items-center">
+        <div class="z-20"><img src="./images/logo-bookmark.svg"
+        alt="logo"></div><button id="hamburger" class=
+        "md:hidden"><img src="./images/icon-hamburger.svg" alt=
+        "menu button"></button>
+        <div id="menu" class=
+        "fixed inset-0 bg-dark-blue bg-opacity-90 hidden justify-center items-center z-10">
+          <!-- Menu Content -->
+          <div class="text-white text-2xl">
+            <div class="flex justify-end w-5/6 mx-auto">
+              <button class="mt-8" id="close"><img src=
+              "./images/icon-close.svg" alt="close"></button>
+            </div><!-- Menu Items -->
+            <ul class=
+            "flex w-5/6 mx-auto items-center flex-col text-2xl uppercase text-center mt-12">
+              <li class="w-full py-3 border-t border-white/30">
+              Features</li>
+              <li class=
+              "w-full box-border py-3 border-y border-white/30">
+              Pricing</li>
+              <li class="w-full py-3 border-b border-white/30">
+              Contact</li><button class=
+              "w-full border-2 border-white bg-transparent text-white rounded py-2 mt-6">Login</button><!-- ... other menu items ... -->
+            </ul>
+          </div>
+          <div class=
+          "absolute bottom-0 flex justify-center mx-auto w-full">
+          <img class="p-2" src="./images/icon-twitter.svg" alt=
+          "twitter logo"> <img class="p-2" src=
+          "./images/icon-facebook.svg" alt="facebook logo"></div>
+        </div>
+        <div class="hidden md:block">
+          <div class="flex">
+            <button class=
+            "font-rubik uppercase py-2 px-8 hover:text-soft-red">Features</button>
+            <button class=
+            "font-rubik uppercase py-2 px-8 hover:text-soft-red">Pricing</button>
+            <button class=
+            "font-rubik uppercase py-2 px-8 hover:text-soft-red">Contact</button>
+            <button class=
+            "font-rubik uppercase py-2 px-8 bg-soft-red text-white rounded border-2 border-soft-red hover:bg-white hover:text-soft-red">
+            Login</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mt-24">
+      <div class=
+      "flex flex-col-reverse md:flex-row justify-between items-center">
+        <div class="text-center md:text-left md:w-1/2">
+          <h1 class="font-rubik text-5xl font-bold">A Simple
+          Bookmark Manager</h1>
+          <p class="font-rubik text-lg mt-8 text-gray-400">A clean
+          and simple interface to organize your favourite websites.
+          Open a new browser tab and see your sites load instantly.
+          Try it for free.</p>
+          <div class="flex mt-8 justify-center">
+            <button class=
+            "font-rubik py-4 px-8 mr-4 bg-soft-blue text-white rounded shadow-lg border-2 border-soft-blue hover:bg-white hover:text-soft-blue">
+            Get it on Chrome</button> <button class=
+            "font-rubik py-4 px-8 bg-gray-50 rounded shadow-lg border-2 hover:border-black hover:bg-white">
+            Get it on Firefox</button>
+          </div>
+        </div>
+        <div class="relative md:w-1/2">
+          <div class=
+          "before:block before:absolute before:top-36 before:left-36 before:w-2/3 before:md:h-72 before:h-36 before:rounded-l-full before:-z-10 before:bg-soft-blue">
+          <img src="./images/illustration-hero.svg" alt=
+          "illustration" class="w-full"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center mx-auto">
+      <div class="mt-12 font-rubik font-medium text-3xl">
+        Features
+      </div>
+      <div class=
+      "max-w-screen-sm text-center font-rubik text-lg mt-8 text-gray-400">
+        Our aim is to make it quick and easy for you to access your
+        favourite websites. Your bookmarks sync between your
+        devices so you can access them on the go.
+      </div>
+      <div id="tab-container" class="text-center md:text-left">
+        <ul class=
+        "flex flex-col md:flex-row items-center w-72 justify-center mx-auto">
+          <li class="w-full"><button class=
+          "tab w-full p-6 py4 border-b-4 border-soft-red hover:text-soft-red md:w-max"
+          data-tab-target="#content1">Simple
+          Bookmarking</button></li>
+          <li class="w-full"><button class=
+          "tab w-full p-6 py4 hover:text-soft-red md:w-max"
+          data-tab-target="#content2">Speedy
+          Searching</button></li>
+          <li class="w-full"><button class=
+          "tab w-full p-6 py4 hover:text-soft-red md:w-max"
+          data-tab-target="#content3">Easy Sharing</button></li>
+        </ul>
+        <div class="mt-20">
+          <div id="content1" class="tab-content">
+            <div class=
+            "flex flex-col md:flex-row justify-between items-center">
+              <div class="relative md:w-1/2 md:mr-20">
+                <div class=
+                "before:block before:absolute before:top-32 before:right-36 before:w-full before:h-72 before:rounded-r-full before:-z-10 before:bg-soft-blue">
+                <img src="./images/illustration-features-tab-1.svg"
+                alt="illustration" class="w-full"></div>
+              </div>
+              <div class="md:w-1/2">
+                <h2 class="font-rubik text-3xl font-bold">Bookmark
+                in one click</h2>
+                <p class="font-rubik text-lg mt-8 text-gray-400">
+                Organize your bookmarks however you like. Our
+                simple drag-and-drop interface gives you complete
+                control over how you manage your favourite
+                sites.</p>
+                <div class="mt-8">
+                  <button class=
+                  "font-rubik py-4 px-8 mr-4 bg-soft-blue text-white rounded shadow-lg">
+                  More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="content2" class="tab-content hidden">
+            <div class=
+            "flex flex-col md:flex-row justify-between items-center">
+              <div class="relative md:w-1/2 md:mr-20">
+                <div class=
+                "before:block before:absolute before:top-32 before:right-36 before:w-full before:md:h-72 before:h-36 before:rounded-r-full before:-z-10 before:bg-soft-blue">
+                <img src="./images/illustration-features-tab-2.svg"
+                alt="illustration" class="w-full"></div>
+              </div>
+              <div class="md:w-1/2">
+                <h2 class="font-rubik text-3xl font-bold">
+                Intelligent search</h2>
+                <p class="font-rubik text-lg mt-8 text-gray-400">
+                Our powerful search feature will help you find
+                saved sites in no time at all. No need to trawl
+                through all of your bookmarks.</p>
+                <div class="mt-8">
+                  <button class=
+                  "font-rubik py-4 px-8 mr-4 bg-soft-blue text-white rounded shadow-lg">
+                  More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="content3" class="tab-content hidden">
+            <div class=
+            "flex flex-col md:flex-row justify-between items-center">
+              <div class="relative mx-auto md:w-1/2 md:mr-20">
+                <div class=
+                "before:block before:absolute before:top-32 before:right-36 before:w-full before:h-36 before:md:h-72 before:rounded-r-full before:-z-10 before:bg-soft-blue">
+                <img src="./images/illustration-features-tab-3.svg"
+                alt="illustration" class="w-full"></div>
+              </div>
+              <div class="md:w-1/2">
+                <h2 class="font-rubik text-3xl font-bold">Share
+                your bookmarks</h2>
+                <p class="font-rubik text-lg mt-8 text-gray-400">
+                Easily share your bookmarks and collections with
+                others. Create a shareable link that you can send
+                at the click of a button.</p>
+                <div class="mt-8">
+                  <button class=
+                  "font-rubik py-4 px-8 mr-4 bg-soft-blue text-white rounded shadow-lg">
+                  More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-36 font-rubik font-medium text-3xl">
+        Download the extension
+      </div>
+      <div class=
+      "max-w-screen-sm text-center font-rubik text-lg mt-8 text-gray-400">
+        We’ve got more browsers in the pipeline. Please do let us
+        know if you’ve got a favourite you’d like us to prioritize.
+      </div>
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class=
+        "flex flex-col items-center shadow-lg py-6 h-min">
+          <img class="my-6" src="./images/logo-chrome.svg" alt=
+          "chrome logo">
+          <div class="font-bold">
+            Add to Chrome
+          </div>
+          <div class="text-gray-400 text-sm">
+            Minimum version 62
+          </div><img class="my-6" src="./images/bg-dots.svg" alt=
+          "dots"> <button class=
+          "px-4 py-2 bg-soft-blue text-white rounded border-2 border-soft-blue hover:bg-white hover:text-soft-blue">
+          Add & Install Extension</button>
+        </div>
+        <div class=
+        "flex flex-col items-center shadow-lg py-6 h-min mt-12">
+          <img class="my-6" src="./images/logo-firefox.svg" alt=
+          "firefox logo">
+          <div class="font-bold">
+            Add to Firefox
+          </div>
+          <div class="text-gray-400 text-sm">
+            Minimum version 55
+          </div><img class="my-6" src="./images/bg-dots.svg" alt=
+          "dots"> <button class=
+          "px-4 py-2 bg-soft-blue text-white rounded border-2 border-soft-blue hover:bg-white hover:text-soft-blue">
+          Add & Install Extension</button>
+        </div>
+        <div class=
+        "flex flex-col items-center shadow-lg py-6 h-min mt-24">
+          <img class="my-6" src="./images/logo-opera.svg" alt=
+          "opera logo">
+          <div class="font-bold">
+            Add to Opera
+          </div>
+          <div class="text-gray-400 text-sm">
+            Minimum version 46
+          </div><img class="my-6" src="./images/bg-dots.svg" alt=
+          "dots"> <button class=
+          "px-4 py-2 bg-soft-blue text-white rounded border-2 border-soft-blue hover:bg-white hover:text-soft-blue">
+          Add & Install Extension</button>
+        </div>
+      </div>
+      <div class="mt-36 font-rubik font-medium text-3xl">
+        Frequently Asked Questions
+      </div>
+      <div class=
+      "max-w-screen-sm text-center font-rubik text-lg mt-8 text-gray-400">
+        Here are some of our FAQs. If you have any other questions
+        you’d like answered please feel free to email us.
+      </div>
+      <div id="accordion" class="w-96">
+        <div class="accordion-item border-y">
+          <div class=
+          "accordion-header w-full flex justify-between items-center">
+          <button class=
+          "w-full py-4 text-left hover:text-soft-red">What is
+          Bookmark?</button> <img class="h-min" src=
+          "./images/icon-arrow.svg" alt="down arrow"></div>
+          <div class="accordion-content hidden leading-loose pb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Fusce tincidunt justo eget ultricies fringilla.
+            Phasellus blandit ipsum quis quam ornare mattis.
+          </div>
+        </div>
+        <div class="accordion-item border-y">
+          <div class=
+          "accordion-header w-full flex justify-between items-center">
+          <button class=
+          "w-full py-4 text-left hover:text-soft-red">How can I
+          request a new browser??</button> <img alt="down arrow"
+          class="h-min" src="./images/icon-arrow.svg"></div>
+          <div class="accordion-content hidden leading-loose pb-4">
+            Vivamus luctus eros aliquet convallis ultricies. Mauris
+            augue massa, ultricies non ligula. Suspendisse
+            imperdiet. Vivamus luctus eros aliquet convallis
+            ultricies. Mauris augue massa, ultricies non ligula.
+            Suspendisse imperdie tVivamus luctus eros aliquet
+            convallis ultricies. Mauris augue massa, ultricies non
+            ligula. Suspendisse imperdiet.
+          </div>
+        </div>
+        <div class="accordion-item border-y">
+          <div class=
+          "accordion-header w-full flex justify-between items-center">
+          <button class=
+          "w-full py-4 text-left hover:text-soft-red">Is there a
+          mobile app?</button> <img class="h-min" src=
+          "./images/icon-arrow.svg" alt="down arrow"></div>
+          <div class="accordion-content hidden leading-loose pb-4">
+            Sed consectetur quam id neque fermentum accumsan.
+            Praesent luctus vestibulum dolor, ut condimentum urna
+            vulputate eget. Cras in ligula quis est pharetra mattis
+            sit amet pharetra purus. Sed sollicitudin ex et
+            ultricies bibendum.
+          </div>
+        </div>
+        <div class="accordion-item border-y">
+          <div class=
+          "accordion-header w-full flex justify-between items-center">
+          <button class=
+          "w-full py-4 text-left hover:text-soft-red">What about
+          other Chromium browsers?</button> <img class="h-min" src=
+          "./images/icon-arrow.svg" alt="down arrow"></div>
+          <div class="accordion-content hidden leading-loose pb-4">
+            Integer condimentum ipsum id imperdiet finibus. Vivamus
+            in placerat mi, at euismod dui. Aliquam vitae neque
+            eget nisl gravida pellentesque non ut velit.
+          </div>
+        </div>
+      </div><button class=
+      "font-rubik py-4 px-8 mr-4 bg-soft-blue text-white rounded shadow-lg mt-20 mb-48">More
+      Info</button>
+    </div>
+  </div>
+  <div class="h-80 bg-soft-blue w-full">
+    <div class="w-5/6 flex flex-col items-center mx-auto">
+      <div class=
+      "tracking-widest py-12 uppercase text-white text-sm">
+        35,000+ already joined
+      </div>
+      <div class="text-3xl font-medium text-white mb-8">
+        Stay up-to-date with what we're doing
+      </div>
+      <form class=
+      "flex flex-col md:flex-row w-full md:justify-center">
+        <input type="email" class=
+        "px-4 py-2 rounded mr-4 mb-2 text-sm w-full md:w-72"
+        placeholder="Enter your email address"> <button type=
+        "submit" class=
+        "bg-soft-red text-white px-4 py-2 mb-2 rounded border-2 border-soft-red hover:bg-white hover:text-soft-red">
+        Contact Us</button>
+      </form>
+    </div>
+    <div class=
+    "flex flex-col md:flex-row justify-between items-center bg-dark-blue w-full text-white">
+      <div class=
+      "flex flex-col md:flex-row justify-between items-center max-w-screen-lg w-5/6 mx-auto text-sm">
+        <div class="flex flex-col md:flex-row items-center">
+          <img class="fill-white" src="./images/logo-bookmark.svg"
+          alt="logo"> <button class=
+          "p-4 uppercase hover:text-soft-red">Features</button>
+          <button class=
+          "p-4 uppercase hover:text-soft-red">Pricing</button>
+          <button class=
+          "p-4 uppercase hover:text-soft-red">Contact</button>
+        </div>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="flex"><img class="px-4" src=
+          "./images/icon-facebook.svg" alt="facebook logo">
+          <img class="px-4" src="./images/icon-twitter.svg" alt=
+          "twitter logo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          document.getElementById("menu").classList.toggle("hidden");
+        });
+
+      document.getElementById("close").addEventListener("click", function () {
+        document.getElementById("menu").classList.toggle("hidden");
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tab");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const target = document.querySelector(tab.dataset.tabTarget);
+
+            // Remove active class from all tabs and hide all content
+            tabs.forEach((t) =>
+              t.classList.remove("border-b-4", "border-soft-red"),
+            );
+            tabContents.forEach((c) => c.classList.add("hidden"));
+
+            // Add active class to clicked tab and show the content
+            tab.classList.add("border-b-4", "border-soft-red");
+            target.classList.remove("hidden");
+          });
+        });
+      });
+  </script>
+  <script>
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const headers = document.querySelectorAll(".accordion-header");
+
+        headers.forEach((header) => {
+          header.addEventListener("click", () => {
+            const content = header.nextElementSibling;
+            content.classList.toggle("hidden");
+          });
+        });
+      });
+  </script>
+</body>
+</html>
